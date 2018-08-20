@@ -48,7 +48,7 @@ class WeatherTest extends TestCase
     public function testGetWeather()
     {
         // 创建模拟接口响应值
-        $response = new Response(200, [], '{"success": true}');
+        /*$response = new Response(200, [], '{"success": true}');
         // 模拟 http
         $client = \Mockery::mock(Client::class);
         // 指定将会产生的形为（在后续的测试中将会按下面的参数来调用）。
@@ -67,7 +67,7 @@ class WeatherTest extends TestCase
         $w->shouldReceive('getHttpClient')
             ->andReturn($client);
 
-        $this->assertSame(['success' => true], $w->getWeather('深圳'));
+        $this->assertSame(['success' => true], $w->getWeather('深圳'));*/
 
         // xml
         /* $response = new Response(200, [], '<hello>content</hello>');
