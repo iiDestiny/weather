@@ -12,12 +12,7 @@ $ composer require iidestiny/weather -vvv
 ```
 
 ## 配置
-env 加上配置信息
-
-```
-BAIDU_AK=xxxxx
-BAIDU_SN=xxxxx
-```
+百度开放平台后台获取 AK
 
 ## 使用
 
@@ -57,6 +52,24 @@ array | string   getWeather(string $location, string $format = 'json', string $c
 > 2. $format 返回格式， json(默认)/xml, json 将会返回数组格式，xml 返回字符串格式。
 > 3. $coordType 坐标格式，允许的值为bd09ll、bd09mc、gcj02、wgs84，默认为 gcj02 经纬度坐标。
 > 4. 详情说明请参考官方：[http://lbsyun.baidu.com/index.php?title=car/api/weather](http://lbsyun.baidu.com/index.php?title=car/api/weather)
+
+## Laravel 中使用
+
+在 `.env` 配置文件中添加配置 (BAIDU_SN) 可选
+
+```
+BAIDU_AK=xxxxx
+BAIDU_SN=xxxxx
+```
+
+然后方法注入
+
+```php
+function index(\IiDestiny\Weather\Weather $weather)
+{
+    return $weather->getWeather('北京');
+}
+```
 
 ## License
 
