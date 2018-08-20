@@ -1,5 +1,13 @@
 <?php
 
+/*
+ * This file is part of the iidestiny/weather.
+ *
+ * (c) 罗彦 <iidestiny@vip.qq.com>
+ *
+ * This source file is subject to the MIT license that is bundled.
+ */
+
 namespace IiDestiny\Weather;
 
 use GuzzleHttp\Client;
@@ -9,11 +17,14 @@ use IiDestiny\Weather\Exceptions\InvalidArgumentException;
 class Weather
 {
     protected $ak;
+
     protected $sn;
+
     protected $guzzleOptions = [];
 
     /**
      * Weather constructor.
+     *
      * @param $ak
      * @param $sn
      */
@@ -38,14 +49,14 @@ class Weather
         $url = 'http://api.map.baidu.com/telematics/v3/weather';
 
         if (!in_array($format, ['xml', 'json'])) {
-            throw new InvalidArgumentException('Invalid response format: ' . $format);
+            throw new InvalidArgumentException('Invalid response format: '.$format);
         }
 
         $query = array_filter([
-            'ak'         => $this->ak,
-            'sn'         => $this->sn,
-            'location'   => $location,
-            'output'     => $format,
+            'ak' => $this->ak,
+            'sn' => $this->sn,
+            'location' => $location,
+            'output' => $format,
             'coord_type' => $coordType,
         ]);
 
@@ -54,7 +65,7 @@ class Weather
                 'query' => $query,
             ])->getBody()->getContents();
 
-            return $format === 'json' ? \json_decode($response, true) : $response;
+            return 'json' === $format ? \json_decode($response, true) : $response;
         } catch (\Exception $e) {
             throw new HttpException($e->getMessage(), $e->getCode(), $e);
         }

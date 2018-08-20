@@ -1,5 +1,13 @@
 <?php
 
+/*
+ * This file is part of the iidestiny/weather.
+ *
+ * (c) 罗彦 <iidestiny@vip.qq.com>
+ *
+ * This source file is subject to the MIT license that is bundled.
+ */
+
 namespace IiDestiny\Weather\Tests;
 
 use GuzzleHttp\Client;
@@ -13,7 +21,6 @@ use PHPUnit\Framework\TestCase;
 
 class WeatherTest extends TestCase
 {
-
     public function testSetGuzzleOptions()
     {
         $w = new Weather('mock-ak');
