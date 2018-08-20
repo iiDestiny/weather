@@ -17,7 +17,7 @@ class Weather
      * @param $ak
      * @param $sn
      */
-    public function __construct($ak, string $sn = null)
+    public function __construct($ak, $sn = null)
     {
         $this->ak = $ak;
         $this->sn = $sn;
@@ -33,7 +33,7 @@ class Weather
         $this->guzzleOptions = $optinns;
     }
 
-    public function getWeather(string $location, string $format = 'json', string $coordType = null)
+    public function getWeather($location, $format = 'json', $coordType = null)
     {
         $url = 'http://api.map.baidu.com/telematics/v3/weather';
 
