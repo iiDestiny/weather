@@ -50,10 +50,10 @@ $response = $weather->getWeather('116.306411,39.981839', 'json', 'bd09ll');
 array | string   getWeather(string $location, string $format = 'json', string $coordType = null)
 ```
 
-> $location 地点，中文或者坐标地址，多个用斗角逗号隔开
-> $format 返回格式， json(默认)/xml, json 将会返回数组格式，xml 返回字符串格式。
-> $coordType 坐标格式，允许的值为bd09ll、bd09mc、gcj02、wgs84，默认为 gcj02 经纬度坐标。
-> 详情说明请参考官方：[http://lbsyun.baidu.com/index.php?title=car/api/weather](http://lbsyun.baidu.com/index.php?title=car/api/weather)
+> 1. $location 地点，中文或者坐标地址，多个用斗角逗号隔开
+> 2. $format 返回格式， json(默认)/xml, json 将会返回数组格式，xml 返回字符串格式。
+> 3. $coordType 坐标格式，允许的值为bd09ll、bd09mc、gcj02、wgs84，默认为 gcj02 经纬度坐标。
+> 4. 详情说明请参考官方：[http://lbsyun.baidu.com/index.php?title=car/api/weather](http://lbsyun.baidu.com/index.php?title=car/api/weather)
 
 ## License
 
