@@ -21,12 +21,17 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         });
 
         $this->app->alias(Weather::class, 'weather');
-
-        $this->mergeConfigFrom(__DIR__ . '../config/services.php', 'services');
     }
 
     public function provides()
     {
         return [Weather::class, 'weather'];
+    }
+
+    public function boot()
+    {
+        $this->publishes([
+            __DIR__ . '/../config/weather.php' => config_path('weather.php'),
+        ]);
     }
 }
