@@ -2,6 +2,8 @@
 
 天气查询组件
 
+[![Build Status](https://travis-ci.org/iiDestiny/weather.svg?branch=master)](https://travis-ci.org/iiDestiny/weather)
+
 ## 安装
 
 ```shell
