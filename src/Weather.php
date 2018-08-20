@@ -33,7 +33,7 @@ class Weather
         $this->guzzleOptions = $optinns;
     }
 
-    public function getWeather(string $location, string $format = 'json', string $coordType = 'null')
+    public function getWeather(string $location, string $format = 'json', string $coordType = null)
     {
         $url = 'http://api.map.baidu.com/telematics/v3/weather';
 

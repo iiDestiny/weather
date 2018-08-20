@@ -17,5 +17,12 @@
         "psr-4": {
             "IiDestiny\\Weather\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IiDestiny\\Weather\\ServiceProvider"
+            ]
+        }
     }
 }
