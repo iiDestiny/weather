@@ -11,6 +11,10 @@
     "require": {
         "guzzlehttp/guzzle": "^6.3"
     },
+    "require-dev": {
+        "mockery/mockery": "^1.1",
+        "phpunit/phpunit": "^5"
+    },
     "autoload": {
         "psr-4": {
             "IiDestiny\\Weather\\": "src/"
