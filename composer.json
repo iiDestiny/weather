@@ -1,6 +1,6 @@
 {
     "name": "iidestiny/weather",
-    "description": "test",
+    "description": "Weather acquisition module",
     "license": "MIT",
     "authors": [
         {
