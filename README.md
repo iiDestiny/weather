@@ -3,6 +3,7 @@
 天气查询组件
 
 [![Build Status](https://travis-ci.org/iiDestiny/weather.svg?branch=master)](https://travis-ci.org/iiDestiny/weather)
+![StyleCI build status](https://github.styleci.io/repos/145386757/shield) 
 
 ## 安装
 
